@@ -1,0 +1,514 @@
+/* ================================================================
+   UniCheatSheet – Navigation Styles
+   Modern Premium Dark Theme with Cyan Accents
+   ================================================================ */
+
+/* ---------- Base Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- Typography ---------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Inter', 'Montserrat', system-ui, -apple-system, sans-serif;
+}
+
+p,
+span,
+a,
+button,
+li {
+  font-family: 'Inter', 'Montserrat', system-ui, -apple-system, sans-serif;
+}
+
+.nav-text {
+  font-family: 'Inter', 'Montserrat', system-ui, -apple-system, sans-serif;
+}
+
+/* GT America Standard fallback font */
+@font-face {
+  font-family: "GT America Standard";
+  src: url("path-to-your-font/GTAmericaStandard-Regular.woff2") format("woff2"),
+    url("path-to-your-font/GTAmericaStandard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000;
+}
+
+/* ---------- Header Section ---------- */
+#header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: transparent;
+  z-index: auto;
+  padding: 0;
+  margin: 0;
+}
+
+/* ---------- Full-Screen Navbar ---------- */
+#navbar {
+  position: fixed;
+  top: -150%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 5, 15, 1);
+  width: 100%;
+  height: 100vh;
+  text-align: left;
+  transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0;
+  z-index: 9999;
+  padding: 120px 60px 80px 60px;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+}
+
+#navbar.active {
+  top: 0;
+}
+
+/* Navbar ambient glow on the left */
+#navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -5%;
+  width: 40%;
+  height: 100%;
+  background: radial-gradient(ellipse at left, rgba(0, 229, 255, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ---------- Close Button ---------- */
+.close-btn {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(0, 10, 20, 0.85);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  padding: 12px 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  z-index: 10001;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+#navbar.active .close-btn {
+  display: flex;
+}
+
+.close-btn i {
+  color: #00e5ff;
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+.close-btn span {
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Inter', 'Montserrat', system-ui, sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.close-btn:hover {
+  background-color: rgba(0, 229, 255, 0.08);
+  border-color: rgba(0, 229, 255, 0.4);
+}
+
+.close-btn:hover i {
+  transform: rotate(90deg);
+}
+
+/* ---------- Navbar Content ---------- */
+.navbar-content {
+  padding: 40px 20px;
+}
+
+#navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 4px 0;
+  margin: 0;
+  position: relative;
+}
+
+/* ---------- Main Nav Links ---------- */
+.nav-link {
+  font-family: 'Inter', 'Montserrat', system-ui, sans-serif;
+  text-decoration: none;
+  font-size: 48px;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.15;
+  letter-spacing: 1px;
+}
+
+/* Text wrapper for underline effect */
+.nav-text {
+  position: relative;
+}
+
+.nav-text::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(90deg, #00e5ff, rgba(0, 229, 255, 0.3));
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 1px;
+}
+
+.nav-link:hover .nav-text::after {
+  width: 100%;
+}
+
+/* ---------- Hamburger Menu Button ---------- */
+.header-right {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: 20px;
+}
+
+.hamburger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 10, 20, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  color: #fff;
+  z-index: 1000;
+  touch-action: manipulation;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.hamburger:hover {
+  background-color: rgba(0, 229, 255, 0.08);
+  border-color: rgba(0, 229, 255, 0.3);
+}
+
+.menu-text {
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Inter', 'Montserrat', system-ui, sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.hamburger i {
+  color: #00e5ff;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.hamburger:hover i {
+  transform: scale(1.1);
+}
+
+.hamburger.active .menu-text {
+  display: none;
+}
+
+.hamburger.hide {
+  display: none;
+}
+
+.hamburger.active {
+  right: 20px;
+  top: 20px;
+}
+
+/* Hamburger icon transition */
+.hamburger .bar {
+  transition: all 0.6s ease;
+}
+
+/* ---------- Submenu ---------- */
+.submenu {
+  display: none;
+  margin-top: 8px;
+  margin-left: 20px;
+}
+
+.submenu li {
+  margin-left: 0;
+  padding: 4px 0;
+}
+
+.submenu li a {
+  color: #fff !important;
+  font-size: clamp(24px, 3vw, 30px);
+  opacity: 0.6;
+  white-space: nowrap;
+  display: block;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.submenu li a:hover {
+  opacity: 1;
+  color: #00e5ff !important;
+  transform: translateX(8px);
+}
+
+.submenu li a .nav-text::after {
+  display: none !important;
+}
+
+/* Keep main nav item underlines */
+.nav-item>.nav-link .nav-text::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(90deg, #00e5ff, rgba(0, 229, 255, 0.3));
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Show submenu when parent is active */
+.nav-item.active .submenu {
+  display: block;
+  animation: submenuFade 0.3s ease-out;
+}
+
+@keyframes submenuFade {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Arrow indicator for items with submenus */
+.nav-link.has-submenu::after {
+  content: '+';
+  margin-left: 15px;
+  font-size: 0.7em;
+  transition: all 0.3s ease;
+  color: #00e5ff;
+  font-weight: 300;
+}
+
+.nav-item.active .nav-link.has-submenu::after {
+  content: '−';
+}
+
+/* When any item is active, dim all nav items */
+.nav-items.has-active .nav-item .nav-link {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* Keep active item white */
+.nav-items.has-active .nav-item.active .nav-link {
+  color: #fff;
+}
+
+/* Keep submenu items white */
+.nav-items.has-active .submenu a {
+  color: #fff;
+}
+
+/* Remove the underline effect on hover */
+#navbar li::after {
+  display: none;
+}
+
+/* Hover effect */
+#navbar li a:hover {
+  opacity: 0.8;
+}
+
+/* Hide main logo when navbar is active */
+#navbar.active~#header .logo {
+  opacity: 0;
+}
+
+/* Adjust main nav items to not overlap with header */
+#navbar .nav-items {
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Expand icon */
+.expand-icon {
+  font-size: 0.6em;
+  transition: transform 0.3s ease;
+  margin-left: 10px;
+}
+
+/* ---------- Fixed Logo ---------- */
+.fixed-logo {
+  position: fixed;
+  left: 8px;
+  top: 8px;
+  z-index: 1001;
+}
+
+.fixed-logo img {
+  height: 80px;
+  width: auto;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+}
+
+.fixed-logo img:hover {
+  filter: drop-shadow(0 2px 12px rgba(0, 229, 255, 0.2));
+}
+
+/* ---------- Search Trigger ---------- */
+.search-trigger {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 8px 15px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.search-trigger:hover {
+  background: rgba(0, 229, 255, 0.08);
+  border-color: rgba(0, 229, 255, 0.3);
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+@media screen and (max-width: 1024px) {
+  #navbar {
+    padding: 100px 40px 60px 40px;
+  }
+
+  .nav-link {
+    font-size: 44px;
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+  #navbar {
+    padding: 100px 30px 50px 30px;
+  }
+
+  .nav-link {
+    font-size: 40px;
+  }
+
+  #navbar li {
+    padding: 3px 0;
+  }
+
+  .fixed-logo img {
+    height: 65px;
+  }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 480px) {
+  #navbar {
+    padding: 90px 20px 40px 20px;
+  }
+
+  .nav-link {
+    font-size: 36px;
+  }
+
+  #navbar li {
+    padding: 1px 0;
+  }
+
+  .submenu {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .fixed-logo img {
+    height: 48px;
+  }
+
+  .hamburger {
+    padding: 10px 14px;
+  }
+
+  .menu-text {
+    font-size: 16px;
+  }
+
+  .hamburger i {
+    font-size: 18px;
+  }
+}
+
+/* Small mobile phones */
+@media screen and (max-width: 320px) {
+  #navbar {
+    padding: 80px 15px 30px 15px;
+  }
+
+  .nav-link {
+    font-size: 32px;
+  }
+
+  #navbar li {
+    padding: 0;
+  }
+
+  .submenu {
+    margin-top: 1px;
+    margin-bottom: 1px;
+  }
+
+  .fixed-logo img {
+    height: 40px;
+  }
+}
