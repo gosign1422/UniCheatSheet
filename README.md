@@ -2,9 +2,9 @@
 
 ![Home Page](images/home.png)
 
-> **A free, high-traffic academic platform built to help students focus on what truly matters for exams.**
+> **A paid, high-traffic academic platform built to help students focus on what truly matters for exams.**
 
-- **UniCheatSheet** is a free, student-focused academic platform built and scaled to serve thousands of university students each semester
+- **UniCheatSheet** is a paid, student-focused academic platform built and scaled to serve thousands of university students each semester
 - The platform has handled **2M+ lifetime requests** and **500K+ requests per semester**
 - Sustaining **50K+ daily requests during peak exam periods**, while delivering **professor-verified academic solutions** across multiple semesters
 - UniCheatSheet was designed, deployed, and maintained with **end-to-end ownership**
@@ -147,31 +147,6 @@ There are:
 - ❌ No Google Ads  
 - ❌ No pop-ups  
 - ❌ No auto-playing banners  
-- ❌ No distraction-driven monetization  
-- ❌ **No paid subscriptions**
-
-The guiding philosophy is simple:
-
-> **If a student is willing to go out of their way to study,  
-their focus should never be interrupted.**
-
-And more importantly:
-
-> **Knowledge should be free and accessible, not gated behind paywalls.**
-
-For this reason, UniCheatSheet has **never introduced a subscription model**, even though it
-was a viable revenue option. Every core feature remains freely accessible to all students.
-
-Every design and monetization decision was made to **protect student attention and access**,
-especially during high-pressure exam periods.
-
-### Revenue Transparency
-
-The platform intentionally prioritizes focus and accessibility over profit.  
-As a result, revenue has always remained **minimal and secondary** to the student experience.
-
-This was a deliberate choice to avoid intrusive monetization, even at the cost of
-slower financial growth.
 
 ---
 
@@ -187,7 +162,7 @@ UniCheatSheet grew **organically from the ground up**, without paid marketing or
 ![Campus Poster Promotion 1](images/poster_promo1.jpeg)
 
 The platform remains:
-- Free for students
+- Easy to use for students
 - Ethical by design
 - Sustainable without compromising focus
 
